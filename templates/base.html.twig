@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome on Eureka{% endblock %}</title>
-
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}
+				Welcome on Eureka
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+		<script defer src="{{ asset('js/index.js') }}"></script>
+	</head>
+	<body>
+		{% block body %}{% endblock %}
+	</body>
 </html>
