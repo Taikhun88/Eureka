@@ -9,12 +9,19 @@
 		</title>
 		<script defer src="{{ asset('js/index.js') }}"></script>
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		{% block body %}{% endblock %}
+	<body class="d-flex flex-column">
+		<header class="b1">Header</header>
+		<div class="flex-fill b2 d-flex flex-row-nowrap justify-content-center">
+			<div class="content d-flex flex-row-nowrap flex-fill">
+				<div class="sidebar b1">Sidebar</div>
+				<div class="flex-fill b4">{% block body %}{% endblock %}</div>
+			</div>
+		</div>
+		<footer class="b3">Footer</footer>
 	</body>
 </html>

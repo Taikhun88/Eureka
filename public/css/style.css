@@ -14,6 +14,25 @@
     --color-dark:#001219 ;
     --gray: #6c757d;
     --gray-dark: #495057 ;
+    --max-width: 1200px;
+}
+
+/* debug */
+
+.b1 {
+    background-color: red;
+}
+
+.b2 {
+    background-color: blue;
+}
+
+.b3 {
+    background-color: yellow;
+}
+
+.b4 {
+    background-color: orange;
 }
 
 /* reset */
@@ -72,6 +91,10 @@ h1, h2, h3, h4, h5 {
     justify-content: flex-end;
 }
 
+.flex-fill {
+    flex: 1;
+}
+
 /* margin */
 
 .m5 {
@@ -87,3 +110,26 @@ h1, h2, h3, h4, h5 {
 }
 
 /* padding */
+
+.p-5 {
+    padding: 5px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+/* general */
+
+.content {
+    max-width: var(--max-width);
+}
+/* sidebar */
+
+.sidebar {
+    min-width: 200px;
+}
