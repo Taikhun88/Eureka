@@ -133,3 +133,9 @@ h1, h2, h3, h4, h5 {
 .sidebar {
     min-width: 200px;
 }
+
+/* header */ 
+
+.header-logo {
+    max-width: 100px;
+}
