@@ -9,9 +9,11 @@
     --font-family:'Open Sans', sans-serif;;
     --box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
     --border-radius: 3px;
-    --border: 1px solid #ddd;
+    --gray-light: #ddd;
+    --border: 1px solid var(--gray-light);
     --color: #212529;
     --color-dark:#001219 ;
+    --color-primary: white;
     --gray: #6c757d;
     --gray-dark: #495057 ;
     --max-width: 1200px;
@@ -53,6 +55,10 @@ ul {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1, h2, h3, h4, h5 {
     color: var(--gray-dark);
 }
@@ -83,6 +89,10 @@ h1, h2, h3, h4, h5 {
     align-items: flex-end;
 }
 
+.justify-content-between {
+    justify-content: space-between;
+}
+
 .justify-content-center {
     justify-content: center;
 }
@@ -99,6 +109,10 @@ h1, h2, h3, h4, h5 {
 
 .m5 {
     margin: 5px;
+}
+
+.mr-5 {
+    margin-right: 5px;
 }
 
 .m-10 {
@@ -128,6 +142,36 @@ h1, h2, h3, h4, h5 {
 .content {
     max-width: var(--max-width);
 }
+
+.btn {
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    border: 0;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transition: opacity 0.4s;
+}
+
+.btn-small {
+    padding: 5px 15px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.btn-primary-stroke {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: white;
+}
+
 /* sidebar */
 
 .sidebar {
@@ -136,6 +180,36 @@ h1, h2, h3, h4, h5 {
 
 /* header */ 
 
+header {
+    box-shadow: var(--box-shadow);
+}
+
+.header-search {
+    border-radius: var(--border-radius);
+    background-color: var(--gray-light);
+    max-width: 400px;
+}
+
+.header-search input {
+    border: 0;
+    outline: 0;
+    background: var(--gray-light);
+}
+
 .header-logo {
-    max-width: 100px;
+    width: 300px;
+    display: flex;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary);  
+    align-items: center;
+}
+
+.header-logo img {
+    max-width: 50px;
+}
+
+.logo-title {
+    margin-right: 10px;
 }
