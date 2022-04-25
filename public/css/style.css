@@ -3,6 +3,7 @@
 :root {
     --primary: #4895ef ;
     --primary-light: #4ccaf0a8;
+    --primary-dark: #023047;
     --accent: #560BAD;
     --warning: #e63946 ;
     --success: #5edb6a;
@@ -243,4 +244,11 @@ header {
 
 .logo-title {
     margin-right: 10px;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--primary-dark);
+    color: var(--color-primary);
 }
