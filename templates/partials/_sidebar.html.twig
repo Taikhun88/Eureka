@@ -1,17 +1,22 @@
 <div class="sidebar py-50">
-	<button class="btn btn-primary btn-icon-primary">
-		<span>Poser une question</span>
-	</button>
+	<a href="{{ path('question_form') }}" class="question-button btn btn-primary btn-icon-primary">
+		    <h1 class="h1-sidebar"> Posez vos questions <i class="fas fa-hand-paper"></i></i></h1>
+	</a>
 	<ul class="sidebar-nav py-20">
-		<li class="active">
-			<i class="fas fa-home mr-5"></i>
-			Liste des questions</li>
-		<li>
+	{# 2 ways to get an active dynamic class integrated in this a tag. #}
+	{# {{ app.request.pathinfo == path('home') ? 'active' : '' }} #}
+		<a href="{{ path('home') }}" {% if app.request.pathinfo == path('home') %}
+			class="active"
+		{% endif %}
+		>
+			<i class="fas fa-list mr-5"></i>
+			Liste des questions</a>
+		<a href="#">
 			<i class="fas fa-question mr-5"></i>
-			Mes questions</li>
-		<li>
+			Mes questions</a>
+		<a href="#">
 			<i class="fas fa-puzzle-piece mr-5"></i>
-			Mes réponses</li>
+			Mes réponses</a>
 	</ul>
 
 </div>

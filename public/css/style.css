@@ -19,6 +19,10 @@
     --gray-dark: #495057 ;
     --max-width: 1200px;
     --font-size-small: 14px;
+    --font-size-regular: 16px;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
 }
 
 /* debug */
@@ -59,10 +63,17 @@ ul {
 
 a {
     text-decoration: none;
+    color: var(--gray-dark);
+    font-weight: 500;
 }
 
 h1, h2, h3, h4, h5 {
     color: var(--gray-dark);
+}
+
+.h1-sidebar {
+    color: var(--color-primary);
+    font-size: 16px;
 }
 
 /* flex */
@@ -149,6 +160,10 @@ h1, h2, h3, h4, h5 {
 
 /* general */
 
+.app-content {
+    background-color: rgba(128, 128, 128, 0.125);
+}
+
 .content {
     max-width: var(--max-width);
 }
@@ -182,24 +197,62 @@ h1, h2, h3, h4, h5 {
     background-color: white;
 }
 
+.block {
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    margin: 10px 0;
+}
+
+.form-row {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    margin-bottom: 5px;
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--color-dark);
+}
+
+.form-errors {
+    color: var(--warning);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semi-bold);
+}   
+
+.form-row input, textarea {
+    border: 0;
+    border-radius: var(--border-radius);
+    padding: 10px 15px;
+    background-color: var(--gray-light);
+}
+
+.form-row textarea {
+    min-height: 150px;
+}
+
 /* sidebar */
 
 .sidebar {
     min-width: 200px;
 }
 
-.sidebar-nav li {
+.sidebar-nav a {
     padding: 10px;
     cursor: pointer;
     margin-bottom: 5px;
+    display: block;
 }
 
-.sidebar-nav li i {
+.sidebar-nav a i {
     color: var(--color-dark);
     font-size: var(--font-size-small);
 }
 
-.sidebar-nav li:hover {
+.sidebar-nav a:hover {
     opacity: 0.8;
     transition: opacity 0.4s;
 }
@@ -208,6 +261,27 @@ h1, h2, h3, h4, h5 {
     border-left: 5px solid var(--primary);
     background-color: var(--primary-light);
 }
+
+/* form */
+.question-form-container {
+    margin-top: 45px;
+    margin-left: 20px;
+    /* display: flex;
+    flex-direction: column; */
+}
+/* 
+.question-form-container label {
+    display: block;
+    width: max-content;
+}
+
+.question-form-container input, textarea {
+    display: block;
+    width: 50%;
+    opacity: 0.5;
+    max-width: 65%;
+    max-height: 50%;
+} */
 
 /* header */ 
 
@@ -244,6 +318,11 @@ header {
 
 .logo-title {
     margin-right: 10px;
+}
+
+.question-button {
+    display: block;
+    width: fit-content;
 }
 
 /* footer */
